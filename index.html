@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shin’ya</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Shin’ya</h2>
+    <div id="request-list"></div>
+    <button id="new-request">New Request</button>
+  </div>
+
+  <div class="main">
+    <div class="tabs" id="tabs"></div>
+
+    <div class="request-settings">
+      <select id="method">
+        <option>GET</option>
+        <option>POST</option>
+        <option>PUT</option>
+        <option>DELETE</option>
+        <option>PATCH</option>
+      </select>
+      <input type="text" id="url" placeholder="Enter API URL" />
+      <button id="send">Send</button>
+    </div>
+
+    <div class="query-params">
+      <h3>Query Parameters</h3>
+      <div id="query-list"></div>
+      <button id="add-query">Add Param</button>
+    </div>
+
+    <div class="headers">
+      <h3>Headers</h3>
+      <div id="header-list"></div>
+      <button id="add-header">Add Header</button>
+    </div>
+
+    <div class="body">
+      <h3>JSON Body</h3>
+      <textarea id="body" placeholder='{"key": "value"}'></textarea>
+    </div>
+
+    <div class="response">
+      <h3>Response</h3>
+      <pre id="response"></pre>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
